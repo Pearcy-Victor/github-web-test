@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .sidebar-icon {
+        @apply relative flex items-center justify-center h-16 w-16 mt-1 mb-1 mx-auto my-auto shadow-md bg-gray-800 text-white text-2xl rounded-full hover:text-xl hover:rounded-3xl hover:bg-gray-400 hover:text-black transition-all duration-100 ease-linear cursor-pointer;
+    }
+
+    .sidebar-dot {
+        @apply absolute flex rounded-full h-6 w-2 right-[76px] top-5 bg-white shadow-xl origin-right justify-center items-center duration-100 scale-0 invisible ease-linear;
+    }
+
+    .flash-appear {
+        @apply peer-hover:scale-100 peer-hover:visible;
+    }
+
+    .sidebar-text {
+        @apply absolute rounded-md text-white bg-black p-2 m-2 left-20 top-2 origin-left w-auto min-w-max text-sm font-bold z-50 transition-all ease-linear duration-100 scale-0 invisible;
+    }
+}
